@@ -216,7 +216,6 @@ class CampaignsController < ApplicationController
       @campaigns = get_campaigns
       if @campaigns.blank?
         @campaigns = get_campaigns(:page => current_page - 1) if current_page > 1
-        render :action => :index and return
       end
       # At this point render destroy.js.rjs
     else # :html request

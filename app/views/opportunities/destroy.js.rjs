@@ -5,3 +5,6 @@ if called_from_index_page?
 else
   page[:recently].replace :partial => "common/recently"
 end
+if Opportunity.all.empty?
+  page.insert_html :top, :opportunities, :partial => "common/empty"
+end

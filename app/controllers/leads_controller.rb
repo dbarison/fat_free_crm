@@ -299,7 +299,6 @@ class LeadsController < ApplicationController
         @leads = get_leads                        # Get leads for current page.
         if @leads.blank?                          # If no lead on this page then try the previous one.
           @leads = get_leads(:page => current_page - 1) if current_page > 1
-          render :action => :index and return     # And reload the whole list even if it's empty.
         end
       else                                        # Called from related asset.
         self.current_page = 1                     # Reset current page to 1 to make sure it stays valid.

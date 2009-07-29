@@ -244,7 +244,6 @@ class OpportunitiesController < ApplicationController
         @opportunities = get_opportunities
         if @opportunities.blank?
           @opportunities = get_opportunities(:page => current_page - 1) if current_page > 1
-          render :action => :index and return
         end
       else # Called from related asset.
         self.current_page = 1

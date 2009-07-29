@@ -8,5 +8,6 @@ public/avatars/**/*
 public/javascripts/cache/*.js
 public/stylesheets/cache/*.css
 .DS_Store
+.idea/*
 *~
 *.swp
